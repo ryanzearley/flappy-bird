@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(77, 192, 202);
+}
+
+#canvas {
+  position: absolute;
+  z-index: 3;
+}
+
+#screen {
+  width: 100%;
+  height: 100%;
+  background-image: url('sprites/background-day.png');
+  background-size: contain;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lives {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  height: 34px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+}
+
+#lives img {
+  padding-right: 7px;
+}
+
+#lives-remaining {
+  font-family: 'Press Start 2P', monospace;
+  color: yellow;
+  font-size: 16px;
+  display: none;
+  z-index: 10;
+  animation: flash 1s ease-in-out 3 forwards;
+}
+
+#score {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+#scoreboard {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 10vh;
+  z-index: 4;
+}
+
+#gameover {
+  position: absolute;
+  z-index: 4;
+  top: -100px;
+}
+
+#base {
+  width: 100%;
+  height: 100%;
+  background-image: url('sprites/base.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  position: absolute;
+}
+
+#start {
+  z-index: 1;
+  transform: translateY(-48px);
+}
+
+@media only screen and (max-width: 554px) {
+  #screen {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.flash {
+  animation: flash 1s ease-in-out infinite forwards;
+}
+
+.score-end-animation {
+  animation: score-end-animation 2s ease-in-out forwards;
+}
+
+.score-end-animation-reverse {
+  animation: score-end-animation 2s ease-in-out reverse;
+}
+
+.gameover-animation {
+  animation: gameover-animation 3s ease-in-out forwards;
+}
+
+.gameover-animation-reverse {
+  animation: gameover-animation 3s ease-in-out reverse;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes score-end-animation {
+  0% {
+    top: 10vh;
+  }
+  100% {
+    top: 40vh;
+  }
+}
+
+@keyframes gameover-animation {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 30vh;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <canvas id="canvas"></canvas>
+      <div id="screen">
+        <div id="lives">
+          <img
+            src="/sprites/yellowbird-midflap.png"
+            alt="1st Life"
+            id="life-1"
+          />
+          <img
+            src="/sprites/yellowbird-midflap.png"
+            alt="2nd Life"
+            id="life-2"
+          />
+          <img
+            src="/sprites/yellowbird-midflap.png"
+            alt="3rd Life"
+            id="life-3"
+          />
+        </div>
+        <div id="lives-remaining">
+          <h2>3 Lives Remaining!</h2>
+        </div>
+        <div id="score">
+          <img src="/sprites/gameover.png" alt="Game Over!" id="gameover" />
+          <div id="scoreboard">
+            <img
+              src="/sprites/0.png"
+              alt="first score digit"
+              id="score-digit-1s"
+            />
+          </div>
+        </div>
+        <div id="base">
+          <img src="/sprites/message.png" alt="Tap to start game" id="start" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
