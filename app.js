@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentLives = 3;
   let lostLives = 0;
   let gameSpeed = 2000;
-  let pipeNumber = 0;
+  let pipeNumber = 1;
 
   let gameObjects = [];
   let bird;
