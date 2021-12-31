@@ -1,4 +1,3 @@
-//"use strict";
 document.addEventListener('DOMContentLoaded', () => {
   const startScreen = document.getElementById('start');
   const scoreboard = document.getElementById('scoreboard');
@@ -187,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (this.vy < 75 && this.vy > -75) {
         birdImage = yellowBirdMidFlap;
       } else if (this.vy < -75) {
-        birdImage = yellowBirdDownFlap; // birdDownFlap
+        birdImage = yellowBirdDownFlap; // use general birdDownFlap variable if bird can change colors
       }
 
       if (!bird.isDead) {
@@ -538,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentLives > 0) return newRun();
 
     setTimeout(function () {
-      //CLEAN UP THIS TIME, put retry button at end of this
+      // Use retry button instead of set time?
       gameObjects = [];
     }, 10000);
 
@@ -551,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gameover.classList.add('gameover-animation');
 
     secondsPassed = 0;
-    oldTimeStamp = 0; // reset all variables!
+    oldTimeStamp = 0; // make sure to reset all variables!
   }
 
   ['touchstart', 'mousedown', 'keydown'].forEach((evt) =>
