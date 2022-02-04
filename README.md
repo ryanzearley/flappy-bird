@@ -1,5 +1,6 @@
 # Flappy-Bird
 Interactive browser game built with vanilla JavaScript, HTML, and CSS with adaptive difficulty, multiple lives, and dynamic animations
+
 <img width="1514" alt="Screen Shot 2022-02-03 at 4 48 59 PM" src="https://user-images.githubusercontent.com/96708796/152435152-4c56f66f-9457-4d27-9c5f-80c46f123428.png">
 
 ## Table of contents
